@@ -41,17 +41,13 @@
     .ab5-ba h2{
       font-family:var(--serif);font-weight:600;
       font-size:clamp(26px,3.2vw,36px);line-height:1.1;
-      letter-spacing:-.01em;color:var(--indigo);margin:0 0 6px;
+      letter-spacing:-.01em;color:var(--indigo);margin:0 0 24px;
     }
-    .ab5-ba__hint{
-      font-size:13px;color:var(--muted);margin:0 0 22px;
-    }
-    .ab5-ba__hint b{color:var(--violet);}
 
     /* ---- comparison frame ---- */
     .ab5-ba__frame{
       --pos:50%;
-      position:relative;width:100%;max-width:540px;margin:0 auto;
+      position:relative;width:100%;max-width:430px;margin:0 auto;
       aspect-ratio:1/1;border-radius:18px;overflow:hidden;
       box-shadow:0 26px 60px -26px rgba(43,45,92,.55);
       cursor:ew-resize;user-select:none;touch-action:none;
@@ -92,7 +88,7 @@
     /* ---- captions under frame ---- */
     .ab5-ba__caps{
       display:grid;grid-template-columns:1fr 1fr;gap:14px;
-      max-width:540px;margin:18px auto 0;text-align:left;
+      max-width:430px;margin:18px auto 0;text-align:left;
     }
     .ab5-ba__cap{
       background:var(--card);border:1px solid var(--line);
@@ -128,7 +124,6 @@
 
   <div class="ab5-ba__inner">
     <h2>Se transformasjonen ...</h2>
-    <p class="ab5-ba__hint"><b>Dra i håndtaket</b> for å sammenligne FØR og ETTER</p>
 
     <div class="ab5-ba__frame" aria-label="Sammenlign før og etter">
       <!-- ETTER (after) — full, underneath -->
