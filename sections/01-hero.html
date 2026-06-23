@@ -25,7 +25,7 @@
       background:
         radial-gradient(1200px 420px at 80% -10%, #efe6f3 0%, rgba(239,230,243,0) 60%),
         var(--paper);
-      padding:48px 20px;
+      padding:72px 20px;
       display:flex;
       justify-content:center;
       box-sizing:border-box;
@@ -41,16 +41,20 @@
       border:none;
       box-shadow:none;
       display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:30px;
+      grid-template-columns:1.02fr .98fr;
+      gap:48px;
+      min-height:560px;
     }
 
     /* ---- left: content ---- */
-    .ab5-hero__body{padding:20px 28px 20px 6px;}
+    .ab5-hero__body{
+      padding:8px 24px 8px 6px;
+      display:flex;flex-direction:column;justify-content:center;
+    }
 
     .ab5-hero__eyebrow{
       display:inline-flex;align-items:center;gap:10px;
-      flex-wrap:wrap;margin-bottom:22px;
+      flex-wrap:wrap;margin-bottom:30px;
     }
     .ab5-hero__kicker{
       font-size:12px;font-weight:700;letter-spacing:.14em;
@@ -65,23 +69,23 @@
     .ab5-hero h1{
       font-family:var(--serif);
       font-weight:600;
-      font-size:clamp(28px,3.4vw,40px);
-      line-height:1.08;
+      font-size:clamp(30px,3.8vw,46px);
+      line-height:1.1;
       letter-spacing:-.01em;
-      margin:0 0 16px;
+      margin:0 0 22px;
       color:var(--indigo);
     }
     .ab5-hero h1 em{color:var(--bloom);font-style:normal;}
 
     .ab5-hero__sub{
-      font-size:16px;line-height:1.55;color:var(--muted);
-      margin:0 0 22px;max-width:42ch;
+      font-size:17px;line-height:1.6;color:var(--muted);
+      margin:0 0 30px;max-width:44ch;
     }
 
     .ab5-hero__proof{
       display:flex;align-items:center;gap:11px;
       font-size:13.5px;color:var(--ink);
-      padding:12px 0 4px;margin-bottom:22px;
+      padding:18px 0 0;margin-bottom:28px;
       border-top:1px solid var(--line);
     }
     .ab5-hero__stars{color:#f0a431;letter-spacing:1px;font-size:13px;}
@@ -91,7 +95,7 @@
     .ab5-hero__offer{
       background:transparent;
       border:none;
-      padding:8px 0 0;
+      padding:0;
     }
     .ab5-hero__price{
       display:flex;align-items:baseline;gap:12px;margin-bottom:14px;
