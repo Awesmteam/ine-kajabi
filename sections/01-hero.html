@@ -5,7 +5,8 @@
      ============================================================ -->
 <section class="ab5-hero">
   <style>
-    /* ---- scoped tokens ---- */
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        /* ---- scoped tokens ---- */
     .ab5-hero{
       --paper:#f4efe7;
       --ink:#23263a;
@@ -83,13 +84,12 @@
     }
 
     .ab5-hero__proof{
-      display:flex;align-items:center;gap:11px;
-      font-size:13.5px;color:var(--ink);
-      padding:18px 0 0;margin-bottom:28px;
-      border-top:1px solid var(--line);
+      display:flex;align-items:center;gap:9px;
+      font-size:13px;color:var(--muted);line-height:1.45;
+      padding:0;margin-bottom:34px;
     }
-    .ab5-hero__stars{color:#f0a431;letter-spacing:1px;font-size:13px;}
-    .ab5-hero__proof b{color:var(--indigo);}
+    .ab5-hero__stars{color:#f0a431;letter-spacing:1px;font-size:12px;flex:0 0 auto;}
+    .ab5-hero__proof b{color:var(--indigo);font-weight:600;}
 
     /* offer box groups price + CTA neatly */
     .ab5-hero__offer{
@@ -106,7 +106,7 @@
     }
     .ab5-hero__now{
       font-family:var(--serif);font-weight:600;
-      font-size:34px;line-height:1;color:var(--indigo);
+      font-size:30px;line-height:1;color:var(--indigo);
       white-space:nowrap;
     }
     .ab5-hero__now small{font-size:15px;font-weight:600;}
@@ -127,9 +127,9 @@
     .ab5-hero__cta:hover{background:var(--accent-d);transform:translateY(-1px);}
 
     .ab5-hero__urgency{
-      display:flex;align-items:center;justify-content:center;gap:7px;
-      font-size:12.5px;font-weight:600;color:#b4521f;
-      margin-top:12px;
+      display:flex;align-items:center;justify-content:center;gap:6px;
+      font-size:12px;font-weight:500;color:var(--muted);
+      margin-top:14px;
     }
 
     /* ---- right: art panel (real painting) ---- */

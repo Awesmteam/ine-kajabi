@@ -8,7 +8,8 @@
      ============================================================ -->
 <div class="ab5-bar-wrap">
   <style>
-    .ab5-bar-wrap{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-bar-wrap{
       --indigo:#2b2d5c;--violet:#6d5ca6;--accent:#e8743b;--accent-d:#cf5d27;
       --line:#e7ddcd;
       --serif:"Fraunces",Georgia,"Times New Roman",serif;
@@ -91,7 +92,8 @@
      ============================================================ -->
 <section class="ab5-hero">
   <style>
-    /* ---- scoped tokens ---- */
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        /* ---- scoped tokens ---- */
     .ab5-hero{
       --paper:#f4efe7;
       --ink:#23263a;
@@ -169,13 +171,12 @@
     }
 
     .ab5-hero__proof{
-      display:flex;align-items:center;gap:11px;
-      font-size:13.5px;color:var(--ink);
-      padding:18px 0 0;margin-bottom:28px;
-      border-top:1px solid var(--line);
+      display:flex;align-items:center;gap:9px;
+      font-size:13px;color:var(--muted);line-height:1.45;
+      padding:0;margin-bottom:34px;
     }
-    .ab5-hero__stars{color:#f0a431;letter-spacing:1px;font-size:13px;}
-    .ab5-hero__proof b{color:var(--indigo);}
+    .ab5-hero__stars{color:#f0a431;letter-spacing:1px;font-size:12px;flex:0 0 auto;}
+    .ab5-hero__proof b{color:var(--indigo);font-weight:600;}
 
     /* offer box groups price + CTA neatly */
     .ab5-hero__offer{
@@ -192,7 +193,7 @@
     }
     .ab5-hero__now{
       font-family:var(--serif);font-weight:600;
-      font-size:34px;line-height:1;color:var(--indigo);
+      font-size:30px;line-height:1;color:var(--indigo);
       white-space:nowrap;
     }
     .ab5-hero__now small{font-size:15px;font-weight:600;}
@@ -213,9 +214,9 @@
     .ab5-hero__cta:hover{background:var(--accent-d);transform:translateY(-1px);}
 
     .ab5-hero__urgency{
-      display:flex;align-items:center;justify-content:center;gap:7px;
-      font-size:12.5px;font-weight:600;color:#b4521f;
-      margin-top:12px;
+      display:flex;align-items:center;justify-content:center;gap:6px;
+      font-size:12px;font-weight:500;color:var(--muted);
+      margin-top:14px;
     }
 
     /* ---- right: art panel (real painting) ---- */
@@ -313,7 +314,8 @@
      ============================================================ -->
 <section class="ab5-pd">
   <style>
-    .ab5-pd{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-pd{
       --paper:#f4efe7;
       --ink:#23263a;
       --muted:#5c6072;
@@ -455,7 +457,8 @@
      ============================================================ -->
 <section class="ab5-ba">
   <style>
-    @property --pos{ syntax:"<percentage>"; inherits:true; initial-value:50%; }
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        @property --pos{ syntax:"<percentage>"; inherits:true; initial-value:50%; }
 
     .ab5-ba{
       --paper:#f4efe7;
@@ -667,7 +670,8 @@
      ============================================================ -->
 <section class="ab5-ben">
   <style>
-    .ab5-ben{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-ben{
       --paper:#f4efe7;
       --ink:#23263a;
       --muted:#5c6072;
@@ -775,7 +779,8 @@
      ============================================================ -->
 <section class="ab5-met">
   <style>
-    .ab5-met{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-met{
       --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;
       --violet:#6d5ca6;--accent:#e8743b;--yes:#1f8a5b;
       --card:#fffdf9;--line:#e7ddcd;
@@ -901,7 +906,8 @@
      ============================================================ -->
 <section class="ab5-days">
   <style>
-    .ab5-days{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-days{
       --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;
       --violet:#6d5ca6;--accent:#e8743b;--bloom:#c45b9c;
       --card:#fffdf9;--line:#e7ddcd;
@@ -976,11 +982,10 @@
     }
     .ab5-days__list{list-style:none;margin:0;padding:0;}
     .ab5-days__list li{
-      position:relative;padding:7px 0 7px 22px;font-size:14px;line-height:1.4;color:var(--ink);
-      border-top:1px solid var(--line);
+      position:relative;padding:9px 0 9px 24px;font-size:14.5px;line-height:1.5;color:var(--muted);
     }
     .ab5-days__list li::before{
-      content:"";position:absolute;left:2px;top:13px;width:8px;height:8px;border-radius:50%;
+      content:"";position:absolute;left:3px;top:15px;width:6px;height:6px;border-radius:50%;
       background:var(--accent);
     }
 
@@ -1071,7 +1076,8 @@
      ============================================================ -->
 <section class="ab5-offer">
   <style>
-    .ab5-offer{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-offer{
       --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;
       --violet:#6d5ca6;--accent:#e8743b;--accent-d:#cf5d27;
       --card:#fffdf9;--line:#e7ddcd;
@@ -1192,7 +1198,8 @@
      ============================================================ -->
 <section class="ab5-tst">
   <style>
-    .ab5-tst{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-tst{
       --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;
       --violet:#6d5ca6;--accent:#e8743b;--star:#f0a431;
       --card:#fffdf9;--line:#e7ddcd;
@@ -1323,7 +1330,8 @@
      ============================================================ -->
 <section class="ab5-ins">
   <style>
-    .ab5-ins{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-ins{
       --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;
       --violet:#6d5ca6;--accent:#e8743b;
       --card:#fffdf9;--line:#e7ddcd;
@@ -1425,7 +1433,8 @@
      ============================================================ -->
 <section class="ab5-aud">
   <style>
-    .ab5-aud{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-aud{
       --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;
       --violet:#6d5ca6;--yes:#1f8a5b;
       --card:#fffdf9;--line:#e7ddcd;
@@ -1494,7 +1503,8 @@
      ============================================================ -->
 <section class="ab5-wall">
   <style>
-    .ab5-wall{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-wall{
       --ink:#23263a;--indigo:#2b2d5c;--muted:#5c6072;
       --wall1:#e7dcc8;--wall2:#dccdb4;--frame:#2c241d;--mat:#fbf7ef;--plaque:#b89b6b;
       --serif:"Fraunces",Georgia,"Times New Roman",serif;
@@ -1597,7 +1607,8 @@
      ============================================================ -->
 <section class="ab5-faq">
   <style>
-    .ab5-faq{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-faq{
       --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;--violet:#6d5ca6;
       --card:#fffdf9;--line:#e7ddcd;
       --serif:"Fraunces",Georgia,"Times New Roman",serif;
@@ -1666,7 +1677,8 @@
      ============================================================ -->
 <section class="ab5-fin">
   <style>
-    .ab5-fin{
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+        .ab5-fin{
       --indigo:#2b2d5c;--violet:#6d5ca6;--accent:#e8743b;--accent-d:#cf5d27;
       --line:rgba(255,255,255,.18);
       --serif:"Fraunces",Georgia,"Times New Roman",serif;
