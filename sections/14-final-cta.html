@@ -1,0 +1,56 @@
+<!-- ============================================================
+     AB5 Workshop — Section 14: Final CTA
+     Simple, aligned with page layout.
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     Norwegian copy kept verbatim.
+     ============================================================ -->
+<section class="ab5-fin">
+  <style>
+    .ab5-fin{
+      --indigo:#2b2d5c;--violet:#6d5ca6;--accent:#e8743b;--accent-d:#cf5d27;
+      --line:rgba(255,255,255,.18);
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+      font-family:var(--sans);
+      background:linear-gradient(160deg,#2b2d5c 0%,#4a3f7d 55%,#6d5ca6 100%);
+      color:#fff;
+      padding:64px 20px;display:flex;justify-content:center;
+      box-sizing:border-box;-webkit-font-smoothing:antialiased;
+    }
+    .ab5-fin *{box-sizing:border-box;}
+    .ab5-fin__inner{width:100%;max-width:1080px;text-align:center;}
+
+    .ab5-fin h2{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(27px,3.4vw,40px);line-height:1.15;letter-spacing:-.01em;
+      margin:0 auto 20px;max-width:760px;
+    }
+    .ab5-fin__meta{
+      display:inline-block;font-size:14.5px;font-weight:600;color:#efe6f3;
+      background:rgba(255,255,255,.08);border:1px solid var(--line);
+      padding:12px 20px;border-radius:999px;margin:0 0 28px;line-height:1.6;
+    }
+    .ab5-fin__cta{
+      display:inline-block;text-decoration:none;
+      background:var(--accent);color:#fff;font-weight:700;font-size:18px;
+      padding:18px 40px;border-radius:14px;
+      box-shadow:0 16px 30px -10px rgba(232,116,59,.6);
+      transition:transform .12s ease, background .12s ease;
+    }
+    .ab5-fin__cta:hover{background:var(--accent-d);transform:translateY(-2px);}
+    .ab5-fin__trust{margin:18px 0 0;font-size:14px;color:#d9d2ec;}
+
+    @media (max-width:560px){
+      .ab5-fin{padding:46px 16px;}
+      .ab5-fin__meta{font-size:13px;padding:11px 16px;}
+      .ab5-fin__cta{font-size:16px;padding:16px 28px;}
+    }
+  </style>
+
+  <div class="ab5-fin__inner">
+    <h2>Bli med og lær å male endelig bilder du er stolt av.</h2>
+    <div class="ab5-fin__meta">📅 MANDAG–ONSDAG 6.-8.juli · ⏰ KL. 19:00 · 🏠 ONLINE FRA DIN EGEN STUE</div>
+    <div><a class="ab5-fin__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Meld meg på nå — 149 kr</a></div>
+    <p class="ab5-fin__trust">Kun 149 kr · Ingen bindingstid · Opptak i 5 dager</p>
+  </div>
+</section>

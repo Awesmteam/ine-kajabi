@@ -1,0 +1,68 @@
+<!-- ============================================================
+     AB5 Workshop — Section 13: "Ofte stilte spørsmål"
+     Simple dropdown FAQ, aligned with page layout.
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     Norwegian copy kept verbatim.
+     ============================================================ -->
+<section class="ab5-faq">
+  <style>
+    .ab5-faq{
+      --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;--violet:#6d5ca6;
+      --card:#fffdf9;--line:#e7ddcd;
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+      font-family:var(--sans);color:var(--ink);
+      background:
+        radial-gradient(1000px 360px at 85% -10%, #efe6f3 0%, rgba(239,230,243,0) 60%),
+        var(--paper);
+      padding:54px 20px;display:flex;justify-content:center;
+      box-sizing:border-box;-webkit-font-smoothing:antialiased;
+    }
+    .ab5-faq *{box-sizing:border-box;}
+    .ab5-faq__inner{width:100%;max-width:1080px;}
+
+    .ab5-faq h2{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(26px,3.1vw,36px);line-height:1.12;letter-spacing:-.01em;
+      color:var(--indigo);text-align:center;margin:0 0 28px;
+    }
+    .ab5-faq__list{max-width:760px;margin:0 auto;}
+    .ab5-faq__item{
+      background:var(--card);border:1px solid var(--line);border-radius:14px;
+      margin-bottom:12px;overflow:hidden;transition:box-shadow .2s ease;
+    }
+    .ab5-faq__item[open]{box-shadow:0 16px 34px -24px rgba(43,45,92,.5);}
+    .ab5-faq__q{
+      list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;
+      padding:18px 20px;font-weight:600;font-size:16px;color:var(--indigo);
+    }
+    .ab5-faq__q::-webkit-details-marker{display:none;}
+    .ab5-faq__chev{margin-left:auto;color:var(--violet);transition:transform .25s ease;font-size:13px;}
+    .ab5-faq__item[open] .ab5-faq__chev{transform:rotate(180deg);}
+    .ab5-faq__a{padding:0 20px 18px;font-size:15px;line-height:1.55;color:var(--muted);}
+
+    @media (max-width:560px){ .ab5-faq{padding:38px 14px;} }
+  </style>
+
+  <div class="ab5-faq__inner">
+    <h2>Ofte stilte spørsmål</h2>
+    <div class="ab5-faq__list">
+      <details class="ab5-faq__item" open>
+        <summary class="ab5-faq__q">Må jeg ha malt før?<span class="ab5-faq__chev">▼</span></summary>
+        <div class="ab5-faq__a">Nei. Vi viser deg nøyaktig hva du skal gjøre.</div>
+      </details>
+      <details class="ab5-faq__item">
+        <summary class="ab5-faq__q">Hva om jeg ikke kan live?<span class="ab5-faq__chev">▼</span></summary>
+        <div class="ab5-faq__a">Opptak er tilgjengelig i 5 dager.</div>
+      </details>
+      <details class="ab5-faq__item">
+        <summary class="ab5-faq__q">Hvilke materialer trenger jeg?<span class="ab5-faq__chev">▼</span></summary>
+        <div class="ab5-faq__a">Du får komplett liste etter påmelding.</div>
+      </details>
+      <details class="ab5-faq__item">
+        <summary class="ab5-faq__q">Er 149 kr den endelige prisen?<span class="ab5-faq__chev">▼</span></summary>
+        <div class="ab5-faq__a">Ja. Ingen skjulte kostnader.</div>
+      </details>
+    </div>
+  </div>
+</section>

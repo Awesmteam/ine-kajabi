@@ -1,0 +1,68 @@
+<!-- ============================================================
+     AB5 Workshop — Section 11: "Hvem er dette for?"
+     Clean, readable checklist aligned with page layout.
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     Norwegian copy kept verbatim.
+     ============================================================ -->
+<section class="ab5-aud">
+  <style>
+    .ab5-aud{
+      --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;
+      --violet:#6d5ca6;--yes:#1f8a5b;
+      --card:#fffdf9;--line:#e7ddcd;
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+      font-family:var(--sans);color:var(--ink);
+      background:
+        radial-gradient(1000px 380px at 15% -10%, #efe6f3 0%, rgba(239,230,243,0) 60%),
+        var(--paper);
+      padding:54px 20px;display:flex;justify-content:center;
+      box-sizing:border-box;-webkit-font-smoothing:antialiased;
+    }
+    .ab5-aud *{box-sizing:border-box;}
+    .ab5-aud__inner{width:100%;max-width:1080px;text-align:center;}
+
+    .ab5-aud h2{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(26px,3.1vw,36px);line-height:1.12;letter-spacing:-.01em;
+      color:var(--indigo);margin:0 0 6px;
+    }
+    .ab5-aud__lead{color:var(--muted);font-size:16px;margin:0 0 28px;}
+
+    .ab5-aud__card{
+      background:var(--card);border:1px solid var(--line);border-radius:22px;
+      box-shadow:0 22px 50px -30px rgba(43,45,92,.5);
+      max-width:760px;margin:0 auto;padding:12px 30px;text-align:left;
+    }
+    .ab5-aud__item{
+      display:flex;align-items:flex-start;gap:14px;
+      padding:18px 0;border-top:1px solid var(--line);
+      font-size:16px;line-height:1.5;color:var(--ink);
+    }
+    .ab5-aud__item:first-child{border-top:none;}
+    .ab5-aud__tick{
+      flex:0 0 28px;width:28px;height:28px;border-radius:50%;margin-top:1px;
+      background:rgba(31,138,91,.14);color:var(--yes);font-weight:700;font-size:14px;
+      display:flex;align-items:center;justify-content:center;
+    }
+
+    @media (max-width:560px){
+      .ab5-aud{padding:38px 14px;}
+      .ab5-aud__card{padding:6px 20px;}
+      .ab5-aud__item{font-size:15px;padding:15px 0;}
+    }
+  </style>
+
+  <div class="ab5-aud__inner">
+    <h2>Hvem er dette for?</h2>
+    <p class="ab5-aud__lead">Dette er for deg som...</p>
+
+    <div class="ab5-aud__card">
+      <div class="ab5-aud__item"><span class="ab5-aud__tick">✓</span><span>Har prøvd å male, men aldri er fornøyd med resultatet</span></div>
+      <div class="ab5-aud__item"><span class="ab5-aud__tick">✓</span><span>Vil slutte å gjette og lære en metode som faktisk virker</span></div>
+      <div class="ab5-aud__item"><span class="ab5-aud__tick">✓</span><span>Drømmer om å male bilder du henger stolt opp</span></div>
+      <div class="ab5-aud__item"><span class="ab5-aud__tick">✓</span><span>Aldri har malt før og lurer på om du kan lære det</span></div>
+      <div class="ab5-aud__item"><span class="ab5-aud__tick">✓</span><span>Vil ha en kveld i uken som er bare din — kreativ, rolig, meningsfull</span></div>
+    </div>
+  </div>
+</section>

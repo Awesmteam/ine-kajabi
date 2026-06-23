@@ -1,0 +1,102 @@
+<!-- ============================================================
+     AB5 Workshop — Section 10: "Dine Instruktører"
+     Two alternating blocks: Agita (image left), Bjørn (image right).
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     Norwegian copy kept verbatim.
+     ============================================================ -->
+<section class="ab5-ins">
+  <style>
+    .ab5-ins{
+      --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;
+      --violet:#6d5ca6;--accent:#e8743b;
+      --card:#fffdf9;--line:#e7ddcd;
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+      font-family:var(--sans);color:var(--ink);
+      background:
+        radial-gradient(1100px 400px at 50% -10%, #efe6f3 0%, rgba(239,230,243,0) 60%),
+        var(--paper);
+      padding:54px 20px;display:flex;justify-content:center;
+      box-sizing:border-box;-webkit-font-smoothing:antialiased;
+    }
+    .ab5-ins *{box-sizing:border-box;}
+    .ab5-ins__inner{width:100%;max-width:1080px;}
+
+    .ab5-ins h2{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(26px,3.1vw,36px);line-height:1.12;letter-spacing:-.01em;
+      color:var(--indigo);text-align:center;margin:0 0 6px;
+    }
+    .ab5-ins__sub{text-align:center;color:var(--muted);font-size:15.5px;margin:0 0 34px;}
+
+    .ab5-ins__block{
+      display:grid;grid-template-columns:0.9fr 1.1fr;gap:34px;align-items:center;
+      background:var(--card);border:1px solid var(--line);border-radius:22px;
+      box-shadow:0 18px 44px -30px rgba(43,45,92,.5);
+      padding:26px;margin-bottom:24px;overflow:hidden;
+    }
+    .ab5-ins__block--right{grid-template-columns:1.1fr 0.9fr;}
+    .ab5-ins__block--right .ab5-ins__media{order:2;}
+
+    .ab5-ins__media{
+      width:100%;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#e7ddcd;
+    }
+    .ab5-ins__media img{width:100%;height:100%;object-fit:cover;display:block;}
+
+    .ab5-ins__name{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--indigo);margin:0 0 4px;}
+    .ab5-ins__role{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--violet);margin:0 0 16px;}
+    .ab5-ins__bio{font-size:15.5px;line-height:1.6;color:var(--muted);margin:0 0 14px;}
+    .ab5-ins__bio b{color:var(--ink);font-weight:600;}
+    .ab5-ins__spec{
+      font-size:15px;line-height:1.5;color:var(--indigo);margin:0;
+      padding:13px 16px;border-radius:12px;background:#faf5ec;border-left:4px solid var(--accent);
+    }
+    .ab5-ins__spec b{font-weight:700;}
+
+    .ab5-ins__together{
+      text-align:center;font-family:var(--serif);font-weight:600;
+      font-size:clamp(17px,2vw,20px);line-height:1.4;color:var(--indigo);
+      max-width:760px;margin:20px auto 0;
+    }
+
+    @media (max-width:760px){
+      .ab5-ins{padding:38px 14px;}
+      .ab5-ins__block,.ab5-ins__block--right{grid-template-columns:1fr;gap:20px;}
+      .ab5-ins__block--right .ab5-ins__media{order:0;}
+      .ab5-ins__media{aspect-ratio:3/2;max-height:340px;}
+    }
+  </style>
+
+  <div class="ab5-ins__inner">
+    <h2>Dine Instruktører</h2>
+    <p class="ab5-ins__sub">To erfarne kunstnere som viser deg NØYAKTIG hvordan det gjøres</p>
+
+    <!-- Agita — image left -->
+    <div class="ab5-ins__block">
+      <div class="ab5-ins__media">
+        <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/142059682137549994C34-6FC0-4456-BA05-0C5898073C1F_1_105_c.jpeg" alt="Agita Egelandsdal">
+      </div>
+      <div class="ab5-ins__txt">
+        <h3 class="ab5-ins__name">Agita Egelandsdal</h3>
+        <p class="ab5-ins__role">Billedkunstner, Kunstpedagog &amp; CEO</p>
+        <p class="ab5-ins__bio">Agita har hjulpet over 1000 voksne med å realisere sin maledrøm. Med sin unike metode – AB5 – inspirerer hun, underviser og viser veien fra nybegynner til kunstner som selger egne bilder.</p>
+        <p class="ab5-ins__spec"><b>Agitas spesialitet:</b> Å se din unike kunstner, farger og vekke den til live.</p>
+      </div>
+    </div>
+
+    <!-- Bjørn — image right -->
+    <div class="ab5-ins__block ab5-ins__block--right">
+      <div class="ab5-ins__media">
+        <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/4030733618668D570AE-933F-4ABE-9C6C-26F06CE77784_1_105_c.jpeg" alt="Bjørn Egelandsdal">
+      </div>
+      <div class="ab5-ins__txt">
+        <h3 class="ab5-ins__name">Bjørn Egelandsdal</h3>
+        <p class="ab5-ins__role">Billedkunstner &amp; Akryl-ekspert</p>
+        <p class="ab5-ins__bio"><b>45 års erfaring</b> som billedkunstner. Bjørn er ekspert på akrylmaling i ekspresjonistisk stil og brenner for uttrykk og følelser i maleriet.</p>
+        <p class="ab5-ins__spec"><b>Bjørns superkraft:</b> Han ser tydelig hva du kan gjøre bedre med dine bilder og viser deg hvordan.</p>
+      </div>
+    </div>
+
+    <p class="ab5-ins__together">Sammen gir Agita og Bjørn Frode deg det komplette bildet – fra hvit lerret til kunstnerisk frihet 🎨</p>
+  </div>
+</section>
