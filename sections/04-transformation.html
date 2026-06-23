@@ -1,0 +1,213 @@
+<!-- ============================================================
+     AB5 Workshop — Section 04: "Se transformasjonen"
+     Animated FØR/ETTER comparison slider.
+     - On scroll into view: wipes from FØR to reveal ETTER, then settles.
+     - Stays interactive: drag the handle to compare.
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     Norwegian copy kept verbatim.
+     ============================================================ -->
+<section class="ab5-ba">
+  <style>
+    @property --pos{ syntax:"<percentage>"; inherits:true; initial-value:50%; }
+
+    .ab5-ba{
+      --paper:#f4efe7;
+      --ink:#23263a;
+      --muted:#5c6072;
+      --indigo:#2b2d5c;
+      --violet:#6d5ca6;
+      --bloom:#c45b9c;
+      --accent:#e8743b;
+      --accent-d:#cf5d27;
+      --no:#d2483f;
+      --yes:#1f8a5b;
+      --card:#fffdf9;
+      --line:#e7ddcd;
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+      font-family:var(--sans);color:var(--ink);
+      background:
+        radial-gradient(1100px 420px at 80% -10%, #efe6f3 0%, rgba(239,230,243,0) 60%),
+        var(--paper);
+      padding:52px 20px;
+      display:flex;justify-content:center;
+      box-sizing:border-box;-webkit-font-smoothing:antialiased;
+    }
+    .ab5-ba *{box-sizing:border-box;}
+
+    .ab5-ba__inner{width:100%;max-width:620px;text-align:center;}
+
+    .ab5-ba h2{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(26px,3.2vw,36px);line-height:1.1;
+      letter-spacing:-.01em;color:var(--indigo);margin:0 0 6px;
+    }
+    .ab5-ba__hint{
+      font-size:13px;color:var(--muted);margin:0 0 22px;
+    }
+    .ab5-ba__hint b{color:var(--violet);}
+
+    /* ---- comparison frame ---- */
+    .ab5-ba__frame{
+      --pos:50%;
+      position:relative;width:100%;max-width:540px;margin:0 auto;
+      aspect-ratio:1/1;border-radius:18px;overflow:hidden;
+      box-shadow:0 26px 60px -26px rgba(43,45,92,.55);
+      cursor:ew-resize;user-select:none;touch-action:none;
+      background:#2b2d5c;
+    }
+    .ab5-ba__frame img{
+      position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;display:block;pointer-events:none;-webkit-user-drag:none;
+    }
+    /* ETTER = bottom layer (full); FØR = top layer, clipped to --pos */
+    .ab5-ba__before{ clip-path:inset(0 calc(100% - var(--pos)) 0 0); z-index:2; }
+    .ab5-ba__frame.is-anim .ab5-ba__before,
+    .ab5-ba__frame.is-anim .ab5-ba__divider{ transition:--pos 1s cubic-bezier(.22,.61,.36,1); }
+
+    .ab5-ba__divider{
+      position:absolute;top:0;bottom:0;left:var(--pos);
+      width:3px;margin-left:-1.5px;z-index:3;
+      background:#fffdf9;box-shadow:0 0 0 1px rgba(43,45,92,.25);
+    }
+    .ab5-ba__handle{
+      position:absolute;top:50%;left:50%;
+      width:42px;height:42px;transform:translate(-50%,-50%);
+      border-radius:50%;background:#fffdf9;color:var(--indigo);
+      display:flex;align-items:center;justify-content:center;
+      font-size:16px;font-weight:700;
+      box-shadow:0 6px 16px -4px rgba(43,45,92,.6);
+    }
+
+    .ab5-ba__badge{
+      position:absolute;top:14px;z-index:4;
+      font-size:12px;font-weight:700;letter-spacing:.06em;
+      color:#fff;padding:5px 11px;border-radius:999px;
+      backdrop-filter:blur(3px);
+    }
+    .ab5-ba__badge--for{left:14px;background:rgba(210,72,63,.9);}
+    .ab5-ba__badge--etter{right:14px;background:rgba(31,138,91,.92);}
+
+    /* ---- captions under frame ---- */
+    .ab5-ba__caps{
+      display:grid;grid-template-columns:1fr 1fr;gap:14px;
+      max-width:540px;margin:18px auto 0;text-align:left;
+    }
+    .ab5-ba__cap{
+      background:var(--card);border:1px solid var(--line);
+      border-radius:14px;padding:14px 16px;
+    }
+    .ab5-ba__cap h3{
+      font-family:var(--serif);font-size:16px;font-weight:600;margin:0 0 4px;
+    }
+    .ab5-ba__cap--for h3{color:var(--no);}
+    .ab5-ba__cap--etter h3{color:var(--yes);}
+    .ab5-ba__cap p{font-size:13px;line-height:1.45;color:var(--muted);margin:0;}
+
+    /* ---- closing + CTA ---- */
+    .ab5-ba__lead{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(20px,2.4vw,26px);color:var(--indigo);
+      margin:28px 0 16px;
+    }
+    .ab5-ba__cta{
+      display:inline-block;text-decoration:none;
+      background:var(--accent);color:#fff;font-weight:700;font-size:16px;
+      padding:15px 30px;border-radius:12px;
+      box-shadow:0 12px 22px -10px rgba(232,116,59,.7);
+      transition:transform .12s ease, background .12s ease;
+    }
+    .ab5-ba__cta:hover{background:var(--accent-d);transform:translateY(-1px);}
+
+    @media (max-width:560px){
+      .ab5-ba{padding:34px 14px;}
+      .ab5-ba__caps{grid-template-columns:1fr;}
+    }
+  </style>
+
+  <div class="ab5-ba__inner">
+    <h2>Se transformasjonen ...</h2>
+    <p class="ab5-ba__hint"><b>Dra i håndtaket</b> for å sammenligne FØR og ETTER</p>
+
+    <div class="ab5-ba__frame" aria-label="Sammenlign før og etter">
+      <!-- ETTER (after) — full, underneath -->
+      <img class="ab5-ba__after"
+           src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/1175631452858Kartra_Page_Assets__42_.png"
+           alt="ETTER: levende maleri">
+      <!-- FØR (before) — clipped on top -->
+      <img class="ab5-ba__before"
+           src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/368691383644Kartra_Page_Assets__38_.png"
+           alt="FØR: flatt og kjedelig">
+
+      <span class="ab5-ba__badge ab5-ba__badge--for">❌ FØR</span>
+      <span class="ab5-ba__badge ab5-ba__badge--etter">✅ ETTER</span>
+
+      <div class="ab5-ba__divider"><span class="ab5-ba__handle">⇄</span></div>
+    </div>
+
+    <div class="ab5-ba__caps">
+      <div class="ab5-ba__cap ab5-ba__cap--for">
+        <h3>FØR: Flatt og kjedelig</h3>
+        <p>Ingen dybde, livsløst, uinteressant</p>
+      </div>
+      <div class="ab5-ba__cap ab5-ba__cap--etter">
+        <h3>ETTER: Levende maleri</h3>
+        <p>Dybde, fargeharmoni, profesjonelt</p>
+      </div>
+    </div>
+
+    <p class="ab5-ba__lead">Dette lærer DU på 3 dager! 🎨</p>
+    <a class="ab5-ba__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Meld meg på her</a>
+  </div>
+
+  <script>
+  (function(){
+    var sections = document.querySelectorAll('.ab5-ba');
+    sections.forEach(function(sec){
+      if(sec.dataset.baInit) return; sec.dataset.baInit = "1";
+      var frame = sec.querySelector('.ab5-ba__frame');
+      if(!frame) return;
+
+      function setPos(p){ frame.style.setProperty('--pos', Math.max(0,Math.min(100,p)) + '%'); }
+      setPos(50);
+
+      // --- scroll-triggered reveal ---
+      var played = false;
+      function play(){
+        if(played) return; played = true;
+        setPos(92);                                       // snap to FØR (no transition)
+        setTimeout(function(){
+          frame.classList.add('is-anim');
+          setPos(16);                                     // wipe to reveal ETTER
+        }, 480);
+        setTimeout(function(){ setPos(50); }, 1750);      // settle in the middle
+      }
+      if('IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){ if(e.isIntersecting){ play(); io.disconnect(); } });
+        }, { threshold: 0.45 });
+        io.observe(frame);
+      } else { play(); }
+
+      // --- drag / pointer interaction ---
+      var dragging = false;
+      function fromEvent(clientX){
+        var r = frame.getBoundingClientRect();
+        setPos(((clientX - r.left) / r.width) * 100);
+      }
+      function start(e){
+        dragging = true;
+        frame.classList.remove('is-anim'); // snappy while dragging
+        fromEvent(e.clientX);
+      }
+      function move(e){ if(dragging) fromEvent(e.clientX); }
+      function end(){ dragging = false; }
+
+      frame.addEventListener('pointerdown', start);
+      window.addEventListener('pointermove', move);
+      window.addEventListener('pointerup', end);
+    });
+  })();
+  </script>
+</section>
