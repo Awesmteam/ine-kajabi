@@ -128,12 +128,16 @@
       margin-top:12px;
     }
 
-    /* ---- right: art panel (self-contained SVG scene) ---- */
+    /* ---- right: art panel (real painting) ---- */
     .ab5-hero__art{
       position:relative;min-height:100%;
-      background:linear-gradient(180deg,#3a2f63 0%,#5b4a8f 42%,#9a6fb0 72%,#e7a36b 100%);
+      background-color:#3a2f63;
+      background-image:
+        linear-gradient(180deg, rgba(35,38,58,0) 60%, rgba(35,38,58,.45) 100%),
+        url("https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/1175631452858Kartra_Page_Assets__42_.png");
+      background-size:cover;
+      background-position:center;
     }
-    .ab5-hero__art svg{position:absolute;inset:0;width:100%;height:100%;}
     .ab5-hero__tag{
       position:absolute;left:18px;bottom:16px;z-index:2;
       font-size:11px;font-weight:600;letter-spacing:.04em;
@@ -184,31 +188,7 @@
     </div>
 
     <!-- art panel -->
-    <div class="ab5-hero__art">
-      <svg viewBox="0 0 400 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <!-- sun glow -->
-        <circle cx="300" cy="150" r="70" fill="#f7d9a6" opacity=".55"/>
-        <!-- distant range -->
-        <path d="M0 300 L70 210 L140 290 L220 190 L300 280 L400 210 L400 560 L0 560 Z" fill="#5e4f93" opacity=".75"/>
-        <!-- mid range -->
-        <path d="M0 360 L90 250 L180 340 L270 240 L360 330 L400 300 L400 560 L0 560 Z" fill="#473a78"/>
-        <!-- front peak -->
-        <path d="M0 430 L120 300 L210 410 L300 320 L400 400 L400 560 L0 560 Z" fill="#322a5c"/>
-        <!-- snow caps -->
-        <path d="M120 300 L150 335 L135 333 L120 350 L105 333 L95 335 Z" fill="#efe9f5" opacity=".85"/>
-        <path d="M300 320 L322 348 L312 346 L300 360 L288 346 L278 348 Z" fill="#efe9f5" opacity=".85"/>
-        <!-- meadow -->
-        <path d="M0 470 Q200 440 400 480 L400 560 L0 560 Z" fill="#6d8a4e"/>
-        <!-- wildflowers -->
-        <g>
-          <circle cx="40" cy="520" r="6" fill="#c45b9c"/><circle cx="40" cy="520" r="2" fill="#ffd66e"/>
-          <circle cx="90" cy="535" r="5" fill="#e08fc4"/><circle cx="90" cy="535" r="1.8" fill="#ffd66e"/>
-          <circle cx="150" cy="515" r="6" fill="#9a5cc4"/><circle cx="150" cy="515" r="2" fill="#ffd66e"/>
-          <circle cx="220" cy="538" r="5" fill="#c45b9c"/><circle cx="220" cy="538" r="1.8" fill="#ffd66e"/>
-          <circle cx="285" cy="520" r="6" fill="#e08fc4"/><circle cx="285" cy="520" r="2" fill="#ffd66e"/>
-          <circle cx="345" cy="535" r="5" fill="#9a5cc4"/><circle cx="345" cy="535" r="1.8" fill="#ffd66e"/>
-        </g>
-      </svg>
+    <div class="ab5-hero__art" role="img" aria-label="Dramatisk fjellmaleri med villblomster">
       <span class="ab5-hero__tag">AB5-metoden · akryl</span>
     </div>
   </div>
