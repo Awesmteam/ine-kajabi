@@ -1,0 +1,113 @@
+<!-- ============================================================
+     AB5 Workshop — Section 05: "På denne workshopen får du:"
+     Narrow auto-sliding marquee (right -> left), pauses on hover.
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     Norwegian copy kept verbatim.
+     ============================================================ -->
+<section class="ab5-ben">
+  <style>
+    .ab5-ben{
+      --paper:#f4efe7;
+      --ink:#23263a;
+      --muted:#5c6072;
+      --indigo:#2b2d5c;
+      --violet:#6d5ca6;
+      --card:#fffdf9;
+      --line:#e7ddcd;
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+      --card-w:300px;          /* card width */
+      --gap:16px;              /* space between cards */
+      --speed:34s;             /* lower = faster; tuned for easy reading */
+
+      font-family:var(--sans);color:var(--ink);
+      background:
+        radial-gradient(1000px 360px at 50% -10%, #efe6f3 0%, rgba(239,230,243,0) 60%),
+        var(--paper);
+      padding:50px 0;
+      box-sizing:border-box;-webkit-font-smoothing:antialiased;
+    }
+    .ab5-ben *{box-sizing:border-box;}
+
+    .ab5-ben h2{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(24px,3vw,32px);line-height:1.12;
+      letter-spacing:-.01em;color:var(--indigo);
+      text-align:center;margin:0 auto 28px;padding:0 20px;
+      max-width:560px;
+    }
+
+    /* narrow viewport with edge fades */
+    .ab5-ben__viewport{
+      max-width:680px;margin:0 auto;overflow:hidden;
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
+              mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
+    }
+
+    .ab5-ben__track{
+      display:flex;width:max-content;
+      animation:ab5-ben-slide var(--speed) linear infinite;
+    }
+    .ab5-ben__viewport:hover .ab5-ben__track{animation-play-state:paused;}
+
+    /* two identical groups -> -50% scrolls exactly one group (seamless) */
+    @keyframes ab5-ben-slide{
+      from{transform:translateX(0);}
+      to{transform:translateX(-50%);}
+    }
+
+    .ab5-ben__card{
+      flex:0 0 var(--card-w);width:var(--card-w);
+      margin-right:var(--gap);
+      background:var(--card);border:1px solid var(--line);
+      border-radius:18px;padding:24px 22px;
+      box-shadow:0 16px 36px -26px rgba(43,45,92,.5);
+      min-height:178px;display:flex;flex-direction:column;
+    }
+    .ab5-ben__icon{
+      width:46px;height:46px;border-radius:13px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:23px;margin-bottom:14px;
+      background:linear-gradient(135deg,#f1e8f7,#fbeef4);
+    }
+    .ab5-ben__card h3{
+      font-family:var(--serif);font-weight:600;
+      font-size:18px;line-height:1.22;color:var(--indigo);
+      margin:0 0 8px;
+    }
+    .ab5-ben__card p{
+      font-size:13.5px;line-height:1.45;color:var(--muted);margin:0;
+    }
+
+    @media (max-width:560px){
+      .ab5-ben{--card-w:270px;--speed:30s;padding:36px 0;}
+      .ab5-ben__viewport{max-width:100%;}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .ab5-ben__track{animation:none;}
+      .ab5-ben__viewport{overflow-x:auto;}
+    }
+  </style>
+
+  <h2>På denne workshopen får du:</h2>
+
+  <div class="ab5-ben__viewport">
+    <div class="ab5-ben__track">
+      <!-- GROUP 1 -->
+      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Mal et dramatisk fjell med villblomster du vil henge stolt opp</h3><p>fra start til slutt på 3 dager</p></div>
+      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Forstå hvorfor ditt maleri blir flatt</h3><p>og hva du skal gjøre annerledes</p></div>
+      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Lære 5 steg som fungerer på alle malerier</h3><p>ikke bare dette ene</p></div>
+      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Få svar på dine spørsmål</h3><p>Spør underveis, vi svarer direkte</p></div>
+      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Se nøyaktig hvilke farger vi bruker</h3><p>og i hvilken rekkefølge</p></div>
+      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Opptak du kan se om igjen</h3><p>tilgjengelig i 5 dager</p></div>
+      <!-- GROUP 2 (duplicate, for seamless loop) -->
+      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Mal et dramatisk fjell med villblomster du vil henge stolt opp</h3><p>fra start til slutt på 3 dager</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Forstå hvorfor ditt maleri blir flatt</h3><p>og hva du skal gjøre annerledes</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Lære 5 steg som fungerer på alle malerier</h3><p>ikke bare dette ene</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Få svar på dine spørsmål</h3><p>Spør underveis, vi svarer direkte</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Se nøyaktig hvilke farger vi bruker</h3><p>og i hvilken rekkefølge</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Opptak du kan se om igjen</h3><p>tilgjengelig i 5 dager</p></div>
+    </div>
+  </div>
+</section>
