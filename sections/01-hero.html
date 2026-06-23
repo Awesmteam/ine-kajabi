@@ -1,0 +1,215 @@
+<!-- ============================================================
+     AB5 Workshop — Section 01: HERO (redesigned)
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     All copy kept verbatim (Norwegian). Contained max-width card.
+     ============================================================ -->
+<section class="ab5-hero">
+  <style>
+    /* ---- scoped tokens ---- */
+    .ab5-hero{
+      --paper:#f4efe7;
+      --ink:#23263a;
+      --muted:#5c6072;
+      --indigo:#2b2d5c;
+      --violet:#6d5ca6;
+      --bloom:#c45b9c;
+      --accent:#e8743b;      /* warm CTA, contrasts the cool art */
+      --accent-d:#cf5d27;
+      --card:#fffdf9;
+      --line:#e7ddcd;
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+      font-family:var(--sans);
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 420px at 80% -10%, #efe6f3 0%, rgba(239,230,243,0) 60%),
+        var(--paper);
+      padding:48px 20px;
+      display:flex;
+      justify-content:center;
+      box-sizing:border-box;
+      -webkit-font-smoothing:antialiased;
+    }
+    .ab5-hero *{box-sizing:border-box;}
+
+    /* the contained shape — does NOT stretch full screen */
+    .ab5-hero__card{
+      width:100%;
+      max-width:980px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:0 24px 60px -28px rgba(43,45,92,.45);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+    }
+
+    /* ---- left: content ---- */
+    .ab5-hero__body{padding:42px 40px 40px;}
+
+    .ab5-hero__eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      flex-wrap:wrap;margin-bottom:22px;
+    }
+    .ab5-hero__kicker{
+      font-size:12px;font-weight:700;letter-spacing:.14em;
+      text-transform:uppercase;color:var(--violet);
+    }
+    .ab5-hero__date{
+      font-size:12px;font-weight:700;letter-spacing:.04em;
+      color:#fff;background:var(--violet);
+      padding:5px 11px;border-radius:999px;
+    }
+
+    .ab5-hero h1{
+      font-family:var(--serif);
+      font-weight:600;
+      font-size:clamp(28px,3.4vw,40px);
+      line-height:1.08;
+      letter-spacing:-.01em;
+      margin:0 0 16px;
+      color:var(--indigo);
+    }
+    .ab5-hero h1 em{color:var(--bloom);font-style:normal;}
+
+    .ab5-hero__sub{
+      font-size:16px;line-height:1.55;color:var(--muted);
+      margin:0 0 22px;max-width:42ch;
+    }
+
+    .ab5-hero__proof{
+      display:flex;align-items:center;gap:11px;
+      font-size:13.5px;color:var(--ink);
+      padding:12px 0 4px;margin-bottom:22px;
+      border-top:1px solid var(--line);
+    }
+    .ab5-hero__stars{color:#f0a431;letter-spacing:1px;font-size:13px;}
+    .ab5-hero__proof b{color:var(--indigo);}
+
+    /* offer box groups price + CTA neatly */
+    .ab5-hero__offer{
+      background:#faf5ec;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px 18px 20px;
+    }
+    .ab5-hero__price{
+      display:flex;align-items:baseline;gap:12px;margin-bottom:14px;
+    }
+    .ab5-hero__old{
+      font-size:14px;color:var(--muted);text-decoration:line-through;
+    }
+    .ab5-hero__now{
+      font-family:var(--serif);font-weight:600;
+      font-size:34px;line-height:1;color:var(--indigo);
+    }
+    .ab5-hero__now small{font-size:15px;font-weight:600;}
+    .ab5-hero__save{
+      margin-left:auto;font-size:11.5px;font-weight:700;
+      color:#1f8a5b;background:#e3f4ea;border-radius:999px;
+      padding:4px 10px;white-space:nowrap;
+    }
+
+    .ab5-hero__cta{
+      display:block;width:100%;text-align:center;text-decoration:none;
+      background:var(--accent);color:#fff;
+      font-size:16px;font-weight:700;
+      padding:16px 22px;border-radius:12px;
+      box-shadow:0 12px 22px -10px rgba(232,116,59,.7);
+      transition:transform .12s ease, background .12s ease;
+    }
+    .ab5-hero__cta:hover{background:var(--accent-d);transform:translateY(-1px);}
+
+    .ab5-hero__urgency{
+      display:flex;align-items:center;justify-content:center;gap:7px;
+      font-size:12.5px;font-weight:600;color:#b4521f;
+      margin-top:12px;
+    }
+
+    /* ---- right: art panel (self-contained SVG scene) ---- */
+    .ab5-hero__art{
+      position:relative;min-height:100%;
+      background:linear-gradient(180deg,#3a2f63 0%,#5b4a8f 42%,#9a6fb0 72%,#e7a36b 100%);
+    }
+    .ab5-hero__art svg{position:absolute;inset:0;width:100%;height:100%;}
+    .ab5-hero__tag{
+      position:absolute;left:18px;bottom:16px;z-index:2;
+      font-size:11px;font-weight:600;letter-spacing:.04em;
+      color:#fff;background:rgba(35,38,58,.55);
+      backdrop-filter:blur(3px);
+      padding:6px 12px;border-radius:999px;
+    }
+
+    /* ---- responsive: stack on mobile ---- */
+    @media (max-width:760px){
+      .ab5-hero{padding:28px 14px;}
+      .ab5-hero__card{grid-template-columns:1fr;border-radius:20px;}
+      .ab5-hero__art{min-height:200px;order:-1;}
+      .ab5-hero__body{padding:30px 24px 30px;}
+    }
+  </style>
+
+  <div class="ab5-hero__card">
+    <!-- content -->
+    <div class="ab5-hero__body">
+      <div class="ab5-hero__eyebrow">
+        <span class="ab5-hero__kicker">3-dagers online workshop</span>
+        <span class="ab5-hero__date">6.–8. juli</span>
+      </div>
+
+      <h1>Mal et dramatisk fjell med <em>villblomster</em> du er stolt av</h1>
+
+      <p class="ab5-hero__sub">Følg Agita steg for steg i ditt eget tempo på 3 kvelder.</p>
+
+      <div class="ab5-hero__proof">
+        <span class="ab5-hero__stars">★★★★★</span>
+        <span>Over <b>715 malere</b> var med på vår forrige workshop. Du trenger ingen erfaring.</span>
+      </div>
+
+      <div class="ab5-hero__offer">
+        <div class="ab5-hero__price">
+          <span class="ab5-hero__old">Vanlig pris: 3 500 kr</span>
+          <span class="ab5-hero__now">kun 149&nbsp;<small>kr</small></span>
+          <span class="ab5-hero__save">Spar 96&nbsp;%</span>
+        </div>
+        <a class="ab5-hero__cta" href="https://pages.checkoutjoy.com/3-d-w-s">
+          Jeg er med, sikre din plass nå
+        </a>
+        <div class="ab5-hero__urgency">
+          <span>⚠️</span><span>Få plasser igjen, workshopen starter 6. juli</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- art panel -->
+    <div class="ab5-hero__art">
+      <svg viewBox="0 0 400 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <!-- sun glow -->
+        <circle cx="300" cy="150" r="70" fill="#f7d9a6" opacity=".55"/>
+        <!-- distant range -->
+        <path d="M0 300 L70 210 L140 290 L220 190 L300 280 L400 210 L400 560 L0 560 Z" fill="#5e4f93" opacity=".75"/>
+        <!-- mid range -->
+        <path d="M0 360 L90 250 L180 340 L270 240 L360 330 L400 300 L400 560 L0 560 Z" fill="#473a78"/>
+        <!-- front peak -->
+        <path d="M0 430 L120 300 L210 410 L300 320 L400 400 L400 560 L0 560 Z" fill="#322a5c"/>
+        <!-- snow caps -->
+        <path d="M120 300 L150 335 L135 333 L120 350 L105 333 L95 335 Z" fill="#efe9f5" opacity=".85"/>
+        <path d="M300 320 L322 348 L312 346 L300 360 L288 346 L278 348 Z" fill="#efe9f5" opacity=".85"/>
+        <!-- meadow -->
+        <path d="M0 470 Q200 440 400 480 L400 560 L0 560 Z" fill="#6d8a4e"/>
+        <!-- wildflowers -->
+        <g>
+          <circle cx="40" cy="520" r="6" fill="#c45b9c"/><circle cx="40" cy="520" r="2" fill="#ffd66e"/>
+          <circle cx="90" cy="535" r="5" fill="#e08fc4"/><circle cx="90" cy="535" r="1.8" fill="#ffd66e"/>
+          <circle cx="150" cy="515" r="6" fill="#9a5cc4"/><circle cx="150" cy="515" r="2" fill="#ffd66e"/>
+          <circle cx="220" cy="538" r="5" fill="#c45b9c"/><circle cx="220" cy="538" r="1.8" fill="#ffd66e"/>
+          <circle cx="285" cy="520" r="6" fill="#e08fc4"/><circle cx="285" cy="520" r="2" fill="#ffd66e"/>
+          <circle cx="345" cy="535" r="5" fill="#9a5cc4"/><circle cx="345" cy="535" r="1.8" fill="#ffd66e"/>
+        </g>
+      </svg>
+      <span class="ab5-hero__tag">AB5-metoden · akryl</span>
+    </div>
+  </div>
+</section>
