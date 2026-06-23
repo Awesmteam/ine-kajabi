@@ -16,6 +16,7 @@
       --bar-h:58px;
     }
     .ab5-bar-wrap *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
 
     .ab5-bar{
       position:fixed;top:0;left:0;right:0;z-index:99999;height:var(--bar-h);
@@ -32,14 +33,16 @@
     }
 
     /* coaches avatars */
-    .ab5-bar__avatars{display:flex;flex:0 0 auto;}
+    .ab5-bar__avatars{display:flex;flex:0 0 auto;cursor:pointer;transition:opacity .12s ease;}
+    .ab5-bar__avatars:hover{opacity:.85;}
     .ab5-bar__avatars img{
       width:34px;height:34px;border-radius:50%;object-fit:cover;
       border:2px solid #fffdf9;box-shadow:0 1px 4px rgba(43,45,92,.3);
     }
     .ab5-bar__avatars img:nth-child(2){margin-left:-12px;}
 
-    .ab5-bar__name{display:flex;flex-direction:column;line-height:1.1;min-width:0;}
+    .ab5-bar__name{display:flex;flex-direction:column;line-height:1.1;min-width:0;text-decoration:none;color:inherit;cursor:pointer;}
+    .ab5-bar__name:hover b{color:var(--accent);}
     .ab5-bar__name b{
       font-family:var(--serif);font-weight:600;font-size:16px;color:var(--indigo);
       white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
@@ -69,14 +72,14 @@
 
   <div class="ab5-bar">
     <div class="ab5-bar__inner">
-      <div class="ab5-bar__avatars">
+      <a class="ab5-bar__avatars" href="#ab5-instruktorer" aria-label="Se instruktørene Agita og Bjørn">
         <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/142059682137549994C34-6FC0-4456-BA05-0C5898073C1F_1_105_c.jpeg" alt="Agita">
         <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/4030733618668D570AE-933F-4ABE-9C6C-26F06CE77784_1_105_c.jpeg" alt="Bjørn">
-      </div>
-      <div class="ab5-bar__name">
+      </a>
+      <a class="ab5-bar__name" href="#ab5-dager">
         <b>AB5 · 3-dagers workshop</b>
         <span>6.-8. juli · online</span>
-      </div>
+      </a>
       <a class="ab5-bar__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Meld meg på — 149 kr</a>
     </div>
   </div>
