@@ -123,17 +123,16 @@
     .ab5-hero__card{
       width:100%;
       max-width:1080px;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:24px;
-      box-shadow:0 24px 60px -28px rgba(43,45,92,.45);
-      overflow:hidden;
+      background:transparent;
+      border:none;
+      box-shadow:none;
       display:grid;
       grid-template-columns:1.05fr .95fr;
+      gap:30px;
     }
 
     /* ---- left: content ---- */
-    .ab5-hero__body{padding:42px 40px 40px;}
+    .ab5-hero__body{padding:20px 28px 20px 6px;}
 
     .ab5-hero__eyebrow{
       display:inline-flex;align-items:center;gap:10px;
@@ -219,6 +218,7 @@
     /* ---- right: art panel (real painting) ---- */
     .ab5-hero__art{
       position:relative;min-height:100%;
+      border-radius:22px;overflow:hidden;
       background-color:#3a2f63;
       background-image:
         linear-gradient(180deg, rgba(35,38,58,0) 60%, rgba(35,38,58,.45) 100%),
@@ -1348,10 +1348,9 @@
     .ab5-ins__sub{text-align:center;color:var(--muted);font-size:15.5px;margin:0 0 34px;}
 
     .ab5-ins__block{
-      display:grid;grid-template-columns:0.9fr 1.1fr;gap:34px;align-items:center;
-      background:var(--card);border:1px solid var(--line);border-radius:22px;
-      box-shadow:0 18px 44px -30px rgba(43,45,92,.5);
-      padding:26px;margin-bottom:24px;overflow:hidden;
+      display:grid;grid-template-columns:0.9fr 1.1fr;gap:38px;align-items:center;
+      background:transparent;border:none;box-shadow:none;
+      padding:8px 0;margin-bottom:30px;
     }
     .ab5-ins__block--right{grid-template-columns:1.1fr 0.9fr;}
     .ab5-ins__block--right .ab5-ins__media{order:2;}
