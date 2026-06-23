@@ -17,9 +17,9 @@
       --serif:"Fraunces",Georgia,"Times New Roman",serif;
       --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
 
-      --card-w:300px;          /* card width */
-      --gap:16px;              /* space between cards */
-      --speed:34s;             /* lower = faster; tuned for easy reading */
+      --card-w:300px;          /* item width */
+      --gap:56px;              /* space between items */
+      --speed:54s;             /* lower = faster; tuned for easy reading */
 
       font-family:var(--sans);color:var(--ink);
       background:
@@ -60,28 +60,20 @@
     .ab5-ben__card{
       flex:0 0 var(--card-w);width:var(--card-w);
       margin-right:var(--gap);
-      background:var(--card);border:1px solid var(--line);
-      border-radius:18px;padding:24px 22px;
-      box-shadow:0 16px 36px -26px rgba(43,45,92,.5);
-      min-height:178px;display:flex;flex-direction:column;
-    }
-    .ab5-ben__icon{
-      width:46px;height:46px;border-radius:13px;
-      display:flex;align-items:center;justify-content:center;
-      font-size:23px;margin-bottom:14px;
-      background:linear-gradient(135deg,#f1e8f7,#fbeef4);
+      min-height:120px;display:flex;flex-direction:column;
+      justify-content:center;text-align:center;
     }
     .ab5-ben__card h3{
       font-family:var(--serif);font-weight:600;
-      font-size:18px;line-height:1.22;color:var(--indigo);
+      font-size:19px;line-height:1.25;color:var(--indigo);
       margin:0 0 8px;
     }
     .ab5-ben__card p{
-      font-size:13.5px;line-height:1.45;color:var(--muted);margin:0;
+      font-size:14px;line-height:1.45;color:var(--muted);margin:0;
     }
 
     @media (max-width:560px){
-      .ab5-ben{--card-w:270px;--speed:30s;padding:36px 0;}
+      .ab5-ben{--card-w:260px;--gap:44px;--speed:46s;padding:36px 0;}
       .ab5-ben__viewport{max-width:100%;}
     }
     @media (prefers-reduced-motion:reduce){
@@ -95,19 +87,19 @@
   <div class="ab5-ben__viewport">
     <div class="ab5-ben__track">
       <!-- GROUP 1 -->
-      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Mal et dramatisk fjell med villblomster du vil henge stolt opp</h3><p>fra start til slutt på 3 dager</p></div>
-      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Forstå hvorfor ditt maleri blir flatt</h3><p>og hva du skal gjøre annerledes</p></div>
-      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Lære 5 steg som fungerer på alle malerier</h3><p>ikke bare dette ene</p></div>
-      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Få svar på dine spørsmål</h3><p>Spør underveis, vi svarer direkte</p></div>
-      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Se nøyaktig hvilke farger vi bruker</h3><p>og i hvilken rekkefølge</p></div>
-      <div class="ab5-ben__card"><div class="ab5-ben__icon">🎨</div><h3>Opptak du kan se om igjen</h3><p>tilgjengelig i 5 dager</p></div>
+      <div class="ab5-ben__card"><h3>Mal et dramatisk fjell med villblomster du vil henge stolt opp</h3><p>fra start til slutt på 3 dager</p></div>
+      <div class="ab5-ben__card"><h3>Forstå hvorfor ditt maleri blir flatt</h3><p>og hva du skal gjøre annerledes</p></div>
+      <div class="ab5-ben__card"><h3>Lære 5 steg som fungerer på alle malerier</h3><p>ikke bare dette ene</p></div>
+      <div class="ab5-ben__card"><h3>Få svar på dine spørsmål</h3><p>Spør underveis, vi svarer direkte</p></div>
+      <div class="ab5-ben__card"><h3>Se nøyaktig hvilke farger vi bruker</h3><p>og i hvilken rekkefølge</p></div>
+      <div class="ab5-ben__card"><h3>Opptak du kan se om igjen</h3><p>tilgjengelig i 5 dager</p></div>
       <!-- GROUP 2 (duplicate, for seamless loop) -->
-      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Mal et dramatisk fjell med villblomster du vil henge stolt opp</h3><p>fra start til slutt på 3 dager</p></div>
-      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Forstå hvorfor ditt maleri blir flatt</h3><p>og hva du skal gjøre annerledes</p></div>
-      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Lære 5 steg som fungerer på alle malerier</h3><p>ikke bare dette ene</p></div>
-      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Få svar på dine spørsmål</h3><p>Spør underveis, vi svarer direkte</p></div>
-      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Se nøyaktig hvilke farger vi bruker</h3><p>og i hvilken rekkefølge</p></div>
-      <div class="ab5-ben__card" aria-hidden="true"><div class="ab5-ben__icon">🎨</div><h3>Opptak du kan se om igjen</h3><p>tilgjengelig i 5 dager</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><h3>Mal et dramatisk fjell med villblomster du vil henge stolt opp</h3><p>fra start til slutt på 3 dager</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><h3>Forstå hvorfor ditt maleri blir flatt</h3><p>og hva du skal gjøre annerledes</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><h3>Lære 5 steg som fungerer på alle malerier</h3><p>ikke bare dette ene</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><h3>Få svar på dine spørsmål</h3><p>Spør underveis, vi svarer direkte</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><h3>Se nøyaktig hvilke farger vi bruker</h3><p>og i hvilken rekkefølge</p></div>
+      <div class="ab5-ben__card" aria-hidden="true"><h3>Opptak du kan se om igjen</h3><p>tilgjengelig i 5 dager</p></div>
     </div>
   </div>
 </section>
