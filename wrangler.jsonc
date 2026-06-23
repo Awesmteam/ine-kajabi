@@ -1,0 +1,25 @@
+{
+  // Cloudflare Workers configuration.
+  // Docs: https://developers.cloudflare.com/workers/wrangler/configuration/
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ine-kajabi",
+  "main": "src/index.js",
+  "compatibility_date": "2025-06-23",
+
+  // Serve the built static site (public/) directly from the edge.
+  // The Worker in src/index.js handles anything that isn't a static file
+  // (e.g. /api/* routes), so this covers both "Pages" and "Workers" use.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+
+  // Add bindings here as you grow, e.g.:
+  // "r2_buckets": [{ "binding": "BUCKET", "bucket_name": "ine-kajabi-assets" }],
+  // "kv_namespaces": [{ "binding": "KV", "id": "<namespace-id>" }]
+}

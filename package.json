@@ -1,0 +1,17 @@
+{
+  "name": "ine-kajabi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AB5 Workshop landing page served via Cloudflare Workers + Static Assets.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "tail": "wrangler tail",
+    "whoami": "wrangler whoami",
+    "pages:deploy": "npm run build && wrangler pages deploy public --project-name ine-kajabi"
+  },
+  "devDependencies": {
+    "wrangler": "^4.103.0"
+  }
+}
