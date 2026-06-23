@@ -1,0 +1,83 @@
+<!-- ============================================================
+     AB5 Workshop — Section 00: STICKY TOP BAR ("freezing bar")
+     Left: two coach avatars + short Norwegian name.
+     Right: CTA button. Stays fixed on top while scrolling.
+     Place this FIRST. Includes a spacer so content isn't hidden.
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     ============================================================ -->
+<div class="ab5-bar-wrap">
+  <style>
+    .ab5-bar-wrap{
+      --indigo:#2b2d5c;--violet:#6d5ca6;--accent:#e8743b;--accent-d:#cf5d27;
+      --line:#e7ddcd;
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+      --bar-h:58px;
+    }
+    .ab5-bar-wrap *{box-sizing:border-box;}
+
+    .ab5-bar{
+      position:fixed;top:0;left:0;right:0;z-index:99999;height:var(--bar-h);
+      background:rgba(255,253,249,.92);
+      -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 6px 20px -12px rgba(43,45,92,.45);
+      font-family:var(--sans);
+      display:flex;align-items:center;
+    }
+    .ab5-bar__inner{
+      width:100%;max-width:1180px;margin:0 auto;padding:0 18px;
+      display:flex;align-items:center;gap:14px;
+    }
+
+    /* coaches avatars */
+    .ab5-bar__avatars{display:flex;flex:0 0 auto;}
+    .ab5-bar__avatars img{
+      width:34px;height:34px;border-radius:50%;object-fit:cover;
+      border:2px solid #fffdf9;box-shadow:0 1px 4px rgba(43,45,92,.3);
+    }
+    .ab5-bar__avatars img:nth-child(2){margin-left:-12px;}
+
+    .ab5-bar__name{display:flex;flex-direction:column;line-height:1.1;min-width:0;}
+    .ab5-bar__name b{
+      font-family:var(--serif);font-weight:600;font-size:16px;color:var(--indigo);
+      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    }
+    .ab5-bar__name span{font-size:11.5px;color:var(--violet);font-weight:600;letter-spacing:.02em;}
+
+    .ab5-bar__cta{
+      margin-left:auto;flex:0 0 auto;text-decoration:none;white-space:nowrap;
+      background:var(--accent);color:#fff;font-family:var(--sans);font-weight:700;font-size:14px;
+      padding:10px 18px;border-radius:10px;
+      box-shadow:0 8px 16px -8px rgba(232,116,59,.7);
+      transition:transform .12s ease, background .12s ease;
+    }
+    .ab5-bar__cta:hover{background:var(--accent-d);transform:translateY(-1px);}
+
+    /* spacer keeps page content below the fixed bar */
+    .ab5-bar__spacer{height:var(--bar-h);}
+
+    @media (max-width:560px){
+      .ab5-bar-wrap{--bar-h:54px;}
+      .ab5-bar__name span{display:none;}
+      .ab5-bar__name b{font-size:14px;}
+      .ab5-bar__cta{font-size:13px;padding:9px 13px;}
+      .ab5-bar__avatars img{width:30px;height:30px;}
+    }
+  </style>
+
+  <div class="ab5-bar">
+    <div class="ab5-bar__inner">
+      <div class="ab5-bar__avatars">
+        <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/142059682137549994C34-6FC0-4456-BA05-0C5898073C1F_1_105_c.jpeg" alt="Agita">
+        <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/4030733618668D570AE-933F-4ABE-9C6C-26F06CE77784_1_105_c.jpeg" alt="Bjørn">
+      </div>
+      <div class="ab5-bar__name">
+        <b>AB5 · 3-dagers workshop</b>
+        <span>6.-8. juli · online</span>
+      </div>
+      <a class="ab5-bar__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Meld meg på — 149 kr</a>
+    </div>
+  </div>
+  <div class="ab5-bar__spacer"></div>
+</div>
