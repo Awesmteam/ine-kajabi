@@ -1,0 +1,143 @@
+<!-- ============================================================
+     AB5 Workshop — Section 02+03 combined
+     Left:  "Kjenner du dette?"  (pain)
+     Right: "Hva om du kunne male:" (desire)
+     Two columns on desktop, stacked on mobile. No coach image.
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     Norwegian copy kept verbatim.
+     ============================================================ -->
+<section class="ab5-pd">
+  <style>
+    .ab5-pd{
+      --paper:#f4efe7;
+      --ink:#23263a;
+      --muted:#5c6072;
+      --indigo:#2b2d5c;
+      --violet:#6d5ca6;
+      --bloom:#c45b9c;
+      --accent:#e8743b;
+      --no:#d2483f;
+      --yes:#1f8a5b;
+      --card:#fffdf9;
+      --line:#e7ddcd;
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+      font-family:var(--sans);
+      color:var(--ink);
+      background:
+        radial-gradient(1100px 380px at 10% -10%, #efe6f3 0%, rgba(239,230,243,0) 60%),
+        var(--paper);
+      padding:48px 20px;
+      display:flex;justify-content:center;
+      box-sizing:border-box;-webkit-font-smoothing:antialiased;
+    }
+    .ab5-pd *{box-sizing:border-box;}
+
+    .ab5-pd__card{
+      width:100%;max-width:1040px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:0 24px 60px -28px rgba(43,45,92,.45);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+    }
+
+    .ab5-pd__col{padding:40px 36px;}
+    .ab5-pd__col--pain{background:#fbf7f0;}
+    .ab5-pd__col--gain{
+      background:linear-gradient(180deg,#f6f1fb 0%,#fbf7f0 100%);
+      border-left:1px solid var(--line);
+    }
+
+    .ab5-pd h2{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(24px,2.6vw,30px);line-height:1.12;
+      letter-spacing:-.01em;margin:0 0 18px;
+    }
+    .ab5-pd__col--pain h2{color:var(--indigo);}
+    .ab5-pd__col--gain h2{color:var(--bloom);}
+
+    .ab5-pd__intro{
+      font-size:15.5px;line-height:1.55;color:var(--muted);
+      margin:0 0 20px;
+    }
+    .ab5-pd__intro b{color:var(--ink);font-weight:600;}
+
+    .ab5-pd__list{list-style:none;margin:0 0 22px;padding:0;}
+    .ab5-pd__list li{
+      display:flex;gap:12px;align-items:flex-start;
+      padding:12px 0;border-top:1px solid var(--line);
+      font-size:14.5px;line-height:1.45;
+    }
+    .ab5-pd__mark{
+      flex:0 0 22px;width:22px;height:22px;margin-top:1px;
+      border-radius:50%;font-weight:700;font-size:12px;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .ab5-pd__mark--no{background:rgba(210,72,63,.12);color:var(--no);}
+    .ab5-pd__mark--yes{background:rgba(31,138,91,.14);color:var(--yes);}
+
+    .ab5-pd__close{
+      font-size:14.5px;line-height:1.55;color:var(--muted);margin:0 0 16px;
+    }
+    .ab5-pd__punch{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(18px,2vw,21px);line-height:1.3;
+      margin:0;padding:15px 18px;border-radius:14px;
+      background:#fff;border:1px solid var(--line);
+    }
+    .ab5-pd__col--pain .ab5-pd__punch{color:var(--indigo);border-left:4px solid var(--accent);}
+    .ab5-pd__col--pain .ab5-pd__punch span{color:var(--accent);}
+    .ab5-pd__col--gain .ab5-pd__punch{color:var(--violet);border-left:4px solid var(--violet);}
+
+    /* responsive: stack, pain first */
+    @media (max-width:820px){
+      .ab5-pd{padding:28px 14px;}
+      .ab5-pd__card{grid-template-columns:1fr;border-radius:20px;}
+      .ab5-pd__col{padding:30px 22px;}
+      .ab5-pd__col--gain{border-left:none;border-top:1px solid var(--line);}
+    }
+  </style>
+
+  <div class="ab5-pd__card">
+    <!-- LEFT: pain -->
+    <div class="ab5-pd__col ab5-pd__col--pain">
+      <h2>Kjenner du dette?</h2>
+
+      <p class="ab5-pd__intro">
+        Du ser et vakkert landskap og tenker: <b>«Dette vil jeg male.»</b><br>
+        Så setter du deg ned. Og så skjer det...
+      </p>
+
+      <ul class="ab5-pd__list">
+        <li><span class="ab5-pd__mark ab5-pd__mark--no">✕</span><span>Fjellet ser flatt ut, ingen dybde, ingen luft mellom lagene</span></li>
+        <li><span class="ab5-pd__mark ab5-pd__mark--no">✕</span><span>Blomstene i forgrunnen ser ut som klatter, ikke levende, ikke naturlige</span></li>
+        <li><span class="ab5-pd__mark ab5-pd__mark--no">✕</span><span>Fargene blir grå og mudrete, ikke den kraftige blå-lilla du så for deg</span></li>
+        <li><span class="ab5-pd__mark ab5-pd__mark--no">✕</span><span>Du sammenligner med andres bilder og tenker: «Hvorfor ser mitt alltid feil ut?»</span></li>
+      </ul>
+
+      <p class="ab5-pd__close">
+        Du har kanskje sett YouTube-videoer. Prøvd på egenhånd. Men når du prøver, blir det .....ikke som du håpet
+      </p>
+
+      <p class="ab5-pd__punch">Det er fordi ingen har vist deg <span>HVORDAN</span></p>
+    </div>
+
+    <!-- RIGHT: desire -->
+    <div class="ab5-pd__col ab5-pd__col--gain">
+      <h2>Hva om du kunne male:</h2>
+
+      <ul class="ab5-pd__list">
+        <li><span class="ab5-pd__mark ab5-pd__mark--yes">✨</span><span>Et fjellmaleri med ekte dybde, der øyet vandrer inn i bildet</span></li>
+        <li><span class="ab5-pd__mark ab5-pd__mark--yes">✨</span><span>Farger som synger sammen, varme og kalde i perfekt balanse</span></li>
+        <li><span class="ab5-pd__mark ab5-pd__mark--yes">✨</span><span>Villblomster i forgrunnen som gir liv og bevegelse</span></li>
+        <li><span class="ab5-pd__mark ab5-pd__mark--yes">✨</span><span>Et ferdig maleri du henger stolt opp og som andre spør: «Har DU malt dette?»</span></li>
+      </ul>
+
+      <p class="ab5-pd__punch">Det er mulig. Og det lærer du på 3 dager.</p>
+    </div>
+  </div>
+</section>
