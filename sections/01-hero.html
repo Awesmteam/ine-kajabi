@@ -37,13 +37,13 @@
     /* the contained shape — does NOT stretch full screen */
     .ab5-hero__card{
       width:100%;
-      max-width:1080px;
+      max-width:1180px;
       background:transparent;
       border:none;
       box-shadow:none;
       display:grid;
       grid-template-columns:1.02fr .98fr;
-      gap:48px;
+      gap:52px;
       min-height:560px;
     }
 
@@ -116,30 +116,35 @@
       padding:4px 10px;white-space:nowrap;
     }
 
+    .ab5-hero__btns{
+      display:flex;flex-wrap:wrap;align-items:center;gap:12px;
+    }
     .ab5-hero__cta{
-      display:block;width:100%;text-align:center;text-decoration:none;
+      display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
       background:var(--accent);color:#fff;
-      font-size:16px;font-weight:700;
-      padding:16px 22px;border-radius:12px;
-      box-shadow:0 12px 22px -10px rgba(232,116,59,.7);
+      font-size:15px;font-weight:700;
+      padding:13px 26px;border-radius:999px;
+      box-shadow:0 10px 20px -10px rgba(232,116,59,.7);
       transition:transform .12s ease, background .12s ease;
     }
     .ab5-hero__cta:hover{background:var(--accent-d);transform:translateY(-1px);}
+    .ab5-hero__vipps{display:inline-flex;align-items:center;transition:transform .12s ease;}
+    .ab5-hero__vipps:hover{transform:translateY(-1px);}
+    .ab5-hero__vipps img{height:46px;width:auto;display:block;border-radius:999px;}
 
     .ab5-hero__urgency{
-      display:flex;align-items:center;justify-content:center;gap:6px;
+      display:flex;align-items:center;justify-content:flex-start;gap:6px;
       font-size:12px;font-weight:500;color:var(--muted);
       margin-top:14px;
     }
 
-    /* ---- right: art panel (real painting) ---- */
+    /* ---- right: photo panel (the two coaches) ---- */
     .ab5-hero__art{
       position:relative;min-height:100%;
       border-radius:22px;overflow:hidden;
       background-color:#3a2f63;
       background-image:
-        linear-gradient(180deg, rgba(35,38,58,0) 60%, rgba(35,38,58,.45) 100%),
-        url("https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/1175631452858Kartra_Page_Assets__42_.png");
+        url("https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/353058938050Kartra_Page_Assets__46_.png");
       background-size:cover;
       background-position:center;
     }
@@ -167,8 +172,10 @@
       .ab5-hero__now{font-size:22px;}
       .ab5-hero__now small{font-size:12px;}
       .ab5-hero__save{font-size:9.5px;padding:3px 6px;}
-      .ab5-hero__cta{font-size:13.5px;padding:14px 8px;white-space:nowrap;letter-spacing:-.1px;}
-      .ab5-hero__urgency{font-size:11px;}
+      .ab5-hero__btns{flex-direction:column;align-items:stretch;gap:10px;}
+      .ab5-hero__cta{font-size:15px;padding:14px 22px;}
+      .ab5-hero__vipps{justify-content:center;}
+      .ab5-hero__urgency{font-size:11px;justify-content:center;}
     }
     @media (max-width:380px){
       .ab5-hero__body{padding:28px 18px;}
@@ -202,9 +209,12 @@
           <span class="ab5-hero__old">Vanlig pris: 3,500 kr.</span>
           <span class="ab5-hero__now">kun 149&nbsp;<small>kr</small></span>
         </div>
-        <a class="ab5-hero__cta" href="https://pages.checkoutjoy.com/3-d-w-s">
-          Jeg er med, sikre din plass nå
-        </a>
+        <div class="ab5-hero__btns">
+          <a class="ab5-hero__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Jeg er med, sikre din plass nå</a>
+          <a class="ab5-hero__vipps" href="https://pages.checkoutjoy.com/3-d-w-s" aria-label="Betal med Vipps">
+            <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/39704505712vipps_pay__2_.png" alt="Betal med Vipps">
+          </a>
+        </div>
         <div class="ab5-hero__urgency">
           <span>⚠️</span><span>Få plasser igjen, workshopen starter 6. juli</span>
         </div>
