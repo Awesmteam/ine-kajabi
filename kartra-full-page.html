@@ -81,7 +81,7 @@
         <b>AB5 · 3-dagers workshop</b>
         <span>6.-8. juli · online</span>
       </a>
-      <a class="ab5-bar__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Meld meg på — 149 kr</a>
+      <a class="ab5-bar__cta" href="#ab5-betaling">Meld meg på — 149 kr</a>
     </div>
   </div>
   <div class="ab5-bar__spacer"></div>
@@ -300,10 +300,7 @@
           <span class="ab5-hero__now">kun 149&nbsp;<small>kr</small></span>
         </div>
         <div class="ab5-hero__btns">
-          <a class="ab5-hero__cta" href="https://pages.checkoutjoy.com/3-d-w-a" target="_blank">Jeg er med, sikre din plass nå</a>
-          <a class="ab5-hero__vipps" href="https://pages.checkoutjoy.com/3-d-w-s" target="_blank" aria-label="Betal med Vipps">
-            <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/39704505712vipps_pay__2_.png" alt="Betal med Vipps">
-          </a>
+          <a class="ab5-hero__cta" href="#ab5-betaling">Meld meg på nå — 149 kr</a>
         </div>
         <div class="ab5-hero__urgency">
           <span>⚠️</span><span>Få plasser igjen, workshopen starter 6. juli</span>
@@ -625,10 +622,7 @@
 
     <p class="ab5-ba__lead">Dette lærer DU på 3 dager! 🎨</p>
     <div class="ab5-ba__btns">
-      <a class="ab5-ba__cta" href="https://pages.checkoutjoy.com/3-d-w-a" target="_blank">Meld meg på her</a>
-      <a class="ab5-ba__vipps" href="https://pages.checkoutjoy.com/3-d-w-s" target="_blank" aria-label="Betal med Vipps">
-        <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/39704505712vipps_pay__2_.png" alt="Betal med Vipps">
-      </a>
+      <a class="ab5-ba__cta" href="#ab5-betaling">Meld meg på nå — 149 kr</a>
     </div>
   </div>
 
@@ -1198,12 +1192,6 @@
       </div>
     </div>
 
-    <div class="ab5-offer__btns">
-      <a class="ab5-offer__cta" href="https://pages.checkoutjoy.com/3-d-w-a" target="_blank">Jeg er med — sikre din plass</a>
-      <a class="ab5-offer__vipps" href="https://pages.checkoutjoy.com/3-d-w-s" target="_blank" aria-label="Betal med Vipps">
-        <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/39704505712vipps_pay__2_.png" alt="Betal med Vipps">
-      </a>
-    </div>
   </div>
 
   <script>
@@ -1219,6 +1207,110 @@
     });
   })();
   </script>
+</section>
+
+<!-- ===== 08b-payment.html ===== -->
+<!-- ============================================================
+     AB5 Workshop — Payment choice section "Velg betalingsmåte"
+     One section, two payment options (the two original CTAs).
+     Self-contained: paste into a Kartra Custom HTML/JS element.
+     Norwegian copy. id=ab5-betaling (scroll target for the single CTA).
+     ============================================================ -->
+<section class="ab5-pay" id="ab5-betaling">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+    .ab5-pay{
+      --paper:#f4efe7;--ink:#23263a;--muted:#5c6072;--indigo:#2b2d5c;
+      --violet:#6d5ca6;--accent:#e8743b;--accent-d:#cf5d27;
+      --card:#fffdf9;--line:#e7ddcd;
+      --serif:"Fraunces",Georgia,"Times New Roman",serif;
+      --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+      font-family:var(--sans);color:var(--ink);
+      background:
+        radial-gradient(1000px 380px at 50% -10%, #efe6f3 0%, rgba(239,230,243,0) 60%),
+        var(--paper);
+      padding:60px 20px;display:flex;justify-content:center;
+      box-sizing:border-box;-webkit-font-smoothing:antialiased;
+      scroll-margin-top:72px;
+    }
+    .ab5-pay *{box-sizing:border-box;}
+
+    .ab5-pay__card{
+      width:100%;max-width:720px;text-align:center;
+      background:var(--card);border:1px solid var(--line);border-radius:24px;
+      box-shadow:0 28px 64px -34px rgba(43,45,92,.55);
+      padding:44px 36px 40px;
+    }
+    .ab5-pay__kicker{
+      font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--violet);margin:0 0 10px;
+    }
+    .ab5-pay h2{
+      font-family:var(--serif);font-weight:600;
+      font-size:clamp(26px,3vw,34px);line-height:1.12;letter-spacing:-.01em;
+      color:var(--indigo);margin:0 0 18px;
+    }
+    .ab5-pay__price{
+      display:flex;align-items:baseline;justify-content:center;gap:12px;margin:0 0 6px;
+    }
+    .ab5-pay__old{font-size:15px;color:var(--muted);text-decoration:line-through;}
+    .ab5-pay__now{font-family:var(--serif);font-weight:600;font-size:38px;line-height:1;color:var(--indigo);}
+    .ab5-pay__now small{font-size:17px;font-weight:600;}
+    .ab5-pay__meta{font-size:13.5px;color:var(--muted);margin:0 0 26px;}
+
+    .ab5-pay__choose{
+      font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+      color:var(--muted);margin:0 0 16px;
+    }
+    .ab5-pay__opts{
+      display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px;
+    }
+    .ab5-pay__cta{
+      display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+      background:var(--accent);color:#fff;font-weight:700;font-size:16px;
+      padding:16px 30px;border-radius:999px;min-height:54px;
+      box-shadow:0 12px 24px -10px rgba(232,116,59,.7);
+      transition:transform .12s ease, background .12s ease;
+    }
+    .ab5-pay__cta:hover{background:var(--accent-d);transform:translateY(-1px);}
+    .ab5-pay__or{font-size:13px;font-weight:600;color:var(--muted);}
+    .ab5-pay__vipps{display:inline-flex;align-items:center;transition:transform .12s ease;}
+    .ab5-pay__vipps:hover{transform:translateY(-1px);}
+    .ab5-pay__vipps img{height:54px;width:auto;display:block;border-radius:999px;
+      box-shadow:0 12px 24px -12px rgba(255,91,32,.6);}
+
+    .ab5-pay__trust{font-size:13.5px;color:var(--muted);margin:24px 0 0;}
+
+    @media (max-width:560px){
+      .ab5-pay{padding:40px 14px;}
+      .ab5-pay__card{padding:32px 20px 30px;}
+      .ab5-pay__opts{flex-direction:column;}
+      .ab5-pay__cta{width:100%;}
+      .ab5-pay__vipps{width:100%;justify-content:center;}
+    }
+  </style>
+
+  <div class="ab5-pay__card">
+    <p class="ab5-pay__kicker">Sikre plassen din</p>
+    <h2>Velg hvordan du vil betale</h2>
+
+    <div class="ab5-pay__price">
+      <span class="ab5-pay__old">Vanlig pris: 3,500 kr.</span>
+      <span class="ab5-pay__now">kun 149&nbsp;<small>kr</small></span>
+    </div>
+    <p class="ab5-pay__meta">📅 6.-8. juli · ⏰ kl. 19:00 · 🏠 online fra din egen stue</p>
+
+    <p class="ab5-pay__choose">Velg betalingsmåte</p>
+    <div class="ab5-pay__opts">
+      <a class="ab5-pay__cta" href="https://pages.checkoutjoy.com/3-d-w-a" target="_blank">Jeg er med, sikre din plass nå</a>
+      <span class="ab5-pay__or">eller</span>
+      <a class="ab5-pay__vipps" href="https://pages.checkoutjoy.com/3-d-w-s" target="_blank" aria-label="Betal med Vipps">
+        <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/39704505712vipps_pay__2_.png" alt="Betal med Vipps">
+      </a>
+    </div>
+
+    <p class="ab5-pay__trust">Kun 149 kr · Ingen bindingstid · Opptak i 5 dager</p>
+  </div>
 </section>
 
 <!-- ===== 09-testimonials.html ===== -->
@@ -1708,7 +1800,7 @@
      Self-contained: paste into a Kartra Custom HTML/JS element.
      Norwegian copy kept verbatim.
      ============================================================ -->
-<section class="ab5-fin">
+<section class="ab5-fin" id="ab5-betaling-2">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
         .ab5-fin{
@@ -1735,6 +1827,8 @@
       background:rgba(255,255,255,.08);border:1px solid var(--line);
       padding:12px 20px;border-radius:999px;margin:0 0 28px;line-height:1.6;
     }
+    .ab5-fin__choose{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#cfc7e8;margin:0 0 14px;}
+    .ab5-fin__or{font-size:13px;font-weight:600;color:#cfc7e8;}
     .ab5-fin__btns{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;}
     .ab5-fin__cta{
       display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
@@ -1760,8 +1854,10 @@
   <div class="ab5-fin__inner">
     <h2>Bli med og lær å male endelig bilder du er stolt av.</h2>
     <div class="ab5-fin__meta">📅 MANDAG–ONSDAG 6.-8.juli · ⏰ KL. 19:00 · 🏠 ONLINE FRA DIN EGEN STUE</div>
+    <p class="ab5-fin__choose">Velg betalingsmåte</p>
     <div class="ab5-fin__btns">
-      <a class="ab5-fin__cta" href="https://pages.checkoutjoy.com/3-d-w-a" target="_blank">Meld meg på nå — 149 kr</a>
+      <a class="ab5-fin__cta" href="https://pages.checkoutjoy.com/3-d-w-a" target="_blank">Jeg er med, sikre din plass nå</a>
+      <span class="ab5-fin__or">eller</span>
       <a class="ab5-fin__vipps" href="https://pages.checkoutjoy.com/3-d-w-s" target="_blank" aria-label="Betal med Vipps">
         <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/39704505712vipps_pay__2_.png" alt="Betal med Vipps">
       </a>
