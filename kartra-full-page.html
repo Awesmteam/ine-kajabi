@@ -1253,7 +1253,7 @@
     .ab5-pay__price{
       display:flex;align-items:baseline;justify-content:center;gap:12px;margin:0 0 6px;
     }
-    .ab5-pay__old{font-size:15px;color:var(--muted);text-decoration:line-through;}
+    .ab5-pay__old{font-size:15px;color:var(--muted);text-decoration:line-through;white-space:nowrap;}
     .ab5-pay__now{font-family:var(--serif);font-weight:600;font-size:38px;line-height:1;color:var(--indigo);}
     .ab5-pay__now small{font-size:17px;font-weight:600;}
     .ab5-pay__meta{font-size:13.5px;color:var(--muted);margin:0 0 26px;}
@@ -1284,6 +1284,8 @@
     @media (max-width:560px){
       .ab5-pay{padding:40px 14px;}
       .ab5-pay__card{padding:32px 20px 30px;}
+      .ab5-pay__price{flex-direction:column;gap:2px;}
+      .ab5-pay__now{font-size:34px;}
       .ab5-pay__opts{flex-direction:column;}
       .ab5-pay__cta{width:100%;}
       .ab5-pay__vipps{width:100%;justify-content:center;}
