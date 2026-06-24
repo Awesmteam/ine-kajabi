@@ -58,14 +58,18 @@
     }
     .ab5-offer__txt p{font-size:14.5px;line-height:1.5;color:var(--muted);margin:0;}
 
+    .ab5-offer__btns{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin-top:28px;}
     .ab5-offer__cta{
-      display:inline-block;text-decoration:none;margin-top:28px;
-      background:var(--accent);color:#fff;font-weight:700;font-size:16px;
-      padding:16px 34px;border-radius:12px;
-      box-shadow:0 12px 22px -10px rgba(232,116,59,.7);
+      display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+      background:var(--accent);color:#fff;font-weight:700;font-size:15px;
+      padding:14px 30px;border-radius:999px;
+      box-shadow:0 10px 20px -10px rgba(232,116,59,.7);
       transition:transform .12s ease, background .12s ease;
     }
     .ab5-offer__cta:hover{background:var(--accent-d);transform:translateY(-1px);}
+    .ab5-offer__vipps{display:inline-flex;align-items:center;transition:transform .12s ease;}
+    .ab5-offer__vipps:hover{transform:translateY(-1px);}
+    .ab5-offer__vipps img{height:48px;width:auto;display:block;border-radius:999px;}
 
     @media (max-width:560px){
       .ab5-offer{padding:38px 14px;}
@@ -101,7 +105,12 @@
       </div>
     </div>
 
-    <a class="ab5-offer__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Jeg er med — sikre din plass</a>
+    <div class="ab5-offer__btns">
+      <a class="ab5-offer__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Jeg er med — sikre din plass</a>
+      <a class="ab5-offer__vipps" href="https://pages.checkoutjoy.com/3-d-w-s" aria-label="Betal med Vipps">
+        <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/39704505712vipps_pay__2_.png" alt="Betal med Vipps">
+      </a>
+    </div>
   </div>
 
   <script>

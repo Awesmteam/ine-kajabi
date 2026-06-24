@@ -112,14 +112,18 @@
       font-size:clamp(20px,2.4vw,26px);color:var(--indigo);
       margin:28px 0 16px;
     }
+    .ab5-ba__btns{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;}
     .ab5-ba__cta{
-      display:inline-block;text-decoration:none;
-      background:var(--accent);color:#fff;font-weight:700;font-size:16px;
-      padding:15px 30px;border-radius:12px;
-      box-shadow:0 12px 22px -10px rgba(232,116,59,.7);
+      display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
+      background:var(--accent);color:#fff;font-weight:700;font-size:15px;
+      padding:14px 28px;border-radius:999px;
+      box-shadow:0 10px 20px -10px rgba(232,116,59,.7);
       transition:transform .12s ease, background .12s ease;
     }
     .ab5-ba__cta:hover{background:var(--accent-d);transform:translateY(-1px);}
+    .ab5-ba__vipps{display:inline-flex;align-items:center;transition:transform .12s ease;}
+    .ab5-ba__vipps:hover{transform:translateY(-1px);}
+    .ab5-ba__vipps img{height:48px;width:auto;display:block;border-radius:999px;}
 
     @media (max-width:560px){
       .ab5-ba{padding:34px 14px;}
@@ -158,7 +162,12 @@
     </div>
 
     <p class="ab5-ba__lead">Dette lærer DU på 3 dager! 🎨</p>
-    <a class="ab5-ba__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Meld meg på her</a>
+    <div class="ab5-ba__btns">
+      <a class="ab5-ba__cta" href="https://pages.checkoutjoy.com/3-d-w-s">Meld meg på her</a>
+      <a class="ab5-ba__vipps" href="https://pages.checkoutjoy.com/3-d-w-s" aria-label="Betal med Vipps">
+        <img src="https://d11n7da8rpqbjy.cloudfront.net/kunstpalett/39704505712vipps_pay__2_.png" alt="Betal med Vipps">
+      </a>
+    </div>
   </div>
 
   <script>
